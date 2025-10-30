@@ -8,6 +8,5 @@ except OSError:
 	# Windows 下通常有 USERNAME 环境变量；再退一步使用 getpass.getuser()
 	username = os.environ.get('USERNAME') or getpass.getuser() or 'unknown'
 
-# 不使用 f-string，使用简单的字符串拼接打印问候语
-print("你好！" + username)
-
+# 将打印改为使用 f-string 简洁表达
+print(f"你好！{username}")
